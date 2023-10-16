@@ -1,0 +1,202 @@
+body {
+    display: flex;
+    height: 100vh;
+    align-items: center;
+    justify-content: center;
+    background-color: #a1926b;
+
+}
+
+
+
+
+
+.birthdaycard {
+    position: relative;
+    width: 250px;
+    height: 350px;
+    cursor: pointer;
+    transform-style: preserve-3d;
+    transform: perspective(2500px);
+    transition: 1s;
+
+}
+
+.birthdaycard:hover {
+    transform: perspective(2500px) rotate(5deg);
+    box-shadow: inset 100px 20px 100px rgba(0, 0, 0, 0.2), 0 10px 100px rgba(0, 0, 0, 0.5);
+
+}
+
+.birthdaycard:hover .outside {
+    transform: rotateY(-160deg);
+}
+
+.birthdaycard:hover .happy {
+    visibility: hidden;
+
+
+}
+
+.outside {
+    position: relative;
+    background-color: bisque;
+    width: 250px;
+    height: 350px;
+    transform-origin: left;
+    overflow: hidden;
+    box-shadow: inset 100px 20px 100px rgba(0, 0, 0, 0.2), 30px 0 50px rgba(0, 0, 0, 0.4);
+
+    transition: 0.6s;
+
+}
+
+.happy {
+    text-align: center;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    margin: 30px;
+    background-image: linear-gradient(120deg);
+    transition: 0.1s;
+
+
+
+}
+
+.ballons {
+    position: absolute;
+}
+
+.ballon-1,
+.ballon-2,
+.ballon-3,
+.ballon-4,
+.ballon-5 {
+    position: absolute;
+    width: 65px;
+    height: 90px;
+    border-radius: 50%;
+}
+
+.ballon-1 {
+    background-color: #d2691e;
+    left: -10px;
+    top: 50px;
+}
+
+.ballon-2 {
+    background-color: rgb(221, 41, 131);
+    left: 50px;
+    top: 20px;
+}
+
+.ballon-3 {
+    background-color: cyan;
+
+    left: 90px;
+    top: 50px;
+}
+
+.ballon-4 {
+    background-color: rgb(98, 69, 126);
+    left: 150px;
+    top: 20px;
+}
+
+.ballon-5 {
+    background-color: rgb(86, 98, 211);
+    left: 200px;
+    top: 50px;
+}
+
+.ballon-1::before,
+.ballon-2::before,
+.ballon-3::before,
+.ballon-4::before,
+.ballon-5::before {
+    content: "";
+    position: absolute;
+    width: 1px;
+    height: 200px;
+    background-color: rgb(201, 160, 116);
+    top: 89px;
+    left: 30px;
+}
+
+.ballon-1::after,
+.ballon-2::after,
+.ballon-3::after,
+.ballon-4::after,
+.ballon-5::after {
+    content: "";
+    position: absolute;
+    border-right: 7px solid transparent;
+    border-left: 7px solid transparent;
+    top: 88px;
+    left: 23px;
+
+}
+
+.ballon-1::after {
+    border-bottom: 10px solid #d2691e;
+
+}
+
+.ballon-2::after {
+    border-bottom: 10px solid rgb(221, 41, 131);
+
+}
+
+.ballon-3::after {
+    border-bottom: 10px solid #d44444;
+
+}
+
+.ballon-4::after {
+    border-bottom: 10px solid #1950d1;
+
+}
+
+.ballon-5::after {
+    border-bottom: 10px solid #320a44;
+
+}
+
+.inside {
+    position: absolute;
+    background-color: bisque;
+    width: 250px;
+    height: 350px;
+    z-index: -1;
+    left: 0;
+    top: 0;
+    box-shadow: inset 100px 20px 100px rgba(0, 0, 0, 0.2);
+
+}
+
+p {
+    font-family: cursive;
+    margin: 40px;
+    color: rgb(22, 10, 124);
+
+}
+
+.name {
+    position: absolute;
+
+    top: 200px;
+    color: darkslategray;
+
+
+}
+
+.back {
+    font-family: serif;
+    text-align: center;
+}
+
+.k {
+    position: absolute;
+    top: 230px;
+    color: black;
+
+}
